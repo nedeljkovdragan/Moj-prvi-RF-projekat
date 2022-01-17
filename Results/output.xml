@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.6.5 on win32)" generated="20220117 16:56:15.053" rpa="false" schemaversion="2">
+<suite id="s1" name="front office Contact" source="C:\Users\d.nedeljkov\Desktop\RF vezba\tests\front_office_Contact.robot">
+<test id="s1-t1" name="Verify that the user can send a message after entering valid credentials in all fields">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220117 16:56:15.307" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220117 16:56:15.307" endtime="20220117 16:56:16.719"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220117 16:56:16.719" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220117 16:56:16.719" endtime="20220117 16:56:20.214"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220117 16:56:20.214" endtime="20220117 16:56:20.353"/>
+</kw>
+<status status="PASS" starttime="20220117 16:56:15.306" endtime="20220117 16:56:20.354"/>
+</kw>
+<kw name="Select the &quot;Contact&quot; Page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_CONTACT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220117 16:56:20.355" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[6]/a'.</msg>
+<status status="PASS" starttime="20220117 16:56:20.355" endtime="20220117 16:56:20.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220117 16:56:23.418" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220117 16:56:20.404" endtime="20220117 16:56:23.418"/>
+</kw>
+<status status="PASS" starttime="20220117 16:56:20.354" endtime="20220117 16:56:23.418"/>
+</kw>
+<kw name="Verify that a user can send a message" library="FrontOfficeApp">
+<kw name="A user can send a message" library="Contact">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${YOUR_NAME_CONTAINER}</arg>
+<arg>Moje ime</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220117 16:56:23.420" level="INFO">Typing text 'Moje ime' into text field '//*[@id="name"]'.</msg>
+<status status="PASS" starttime="20220117 16:56:23.420" endtime="20220117 16:56:23.516"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220117 16:56:26.520" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220117 16:56:23.516" endtime="20220117 16:56:26.520"/>
+</kw>
+<status status="PASS" starttime="20220117 16:56:23.419" endtime="20220117 16:56:26.520"/>
+</kw>
+<status status="PASS" starttime="20220117 16:56:23.419" endtime="20220117 16:56:26.521"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220117 16:56:26.524" endtime="20220117 16:56:28.821"/>
+</kw>
+<status status="PASS" starttime="20220117 16:56:26.522" endtime="20220117 16:56:28.821"/>
+</kw>
+<status status="PASS" starttime="20220117 16:56:15.305" endtime="20220117 16:56:28.822"/>
+</test>
+<doc>Testing of the "Services" section</doc>
+<status status="PASS" starttime="20220117 16:56:15.055" endtime="20220117 16:56:28.824"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="front office Contact">front office Contact</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
