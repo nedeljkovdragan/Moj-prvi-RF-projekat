@@ -1,127 +1,1056 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.6.5 on win32)" generated="20220117 17:13:39.539" rpa="false" schemaversion="2">
-<suite id="s1" name="front office Contact" source="C:\Users\d.nedeljkov\Desktop\RF vezba\tests\front_office_Contact.robot">
-<test id="s1-t1" name="Verify that the user can send a message after entering valid credentials in all fields">
+<robot generator="Robot 4.1.3 (Python 3.6.5 on win32)" generated="20220119 13:21:42.750" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\Users\d.nedeljkov\Desktop\RF vezba\tests">
+<suite id="s1-s1" name="Front Office About" source="C:\Users\d.nedeljkov\Desktop\RF vezba\tests\Front_Office_About.robot">
+<test id="s1-s1-t1" name="Verify that the &quot;Our Humble Beginnings&quot; section has &quot;2009-2011&quot; years in it">
 <kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220117 17:13:39.798" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220117 17:13:39.798" endtime="20220117 17:13:41.253"/>
+<msg timestamp="20220119 13:21:43.026" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:21:43.025" endtime="20220119 13:21:44.430"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220117 17:13:41.254" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
-<status status="PASS" starttime="20220117 17:13:41.254" endtime="20220117 17:13:44.666"/>
+<msg timestamp="20220119 13:21:44.430" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:21:44.430" endtime="20220119 13:21:48.149"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220117 17:13:44.666" endtime="20220117 17:13:44.786"/>
+<status status="PASS" starttime="20220119 13:21:48.149" endtime="20220119 13:21:48.276"/>
 </kw>
-<status status="PASS" starttime="20220117 17:13:39.797" endtime="20220117 17:13:44.786"/>
+<status status="PASS" starttime="20220119 13:21:43.025" endtime="20220119 13:21:48.276"/>
+</kw>
+<kw name="Go to the &quot;About&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;About&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_ABOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:21:48.279" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20220119 13:21:48.278" endtime="20220119 13:21:48.328"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:21:51.340" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:21:48.328" endtime="20220119 13:21:51.340"/>
+</kw>
+<status status="PASS" starttime="20220119 13:21:48.278" endtime="20220119 13:21:51.340"/>
+</kw>
+<status status="PASS" starttime="20220119 13:21:48.277" endtime="20220119 13:21:51.340"/>
+</kw>
+<kw name="&quot;Our Humble Beginnings&quot; section should have &quot;2009-2011&quot; years in it" library="FrontOfficeApp">
+<kw name="&quot;Our Humble Beginnings&quot; have &quot;2009-2011&quot; years in it" library="About">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${SECTION_ONE}</arg>
+<arg>2009-2011</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220119 13:21:51.371" level="INFO">Element '//*[@id="about"]/div/div[2]/div/ul/li[1]/div[2]' contains text '2009-2011'.</msg>
+<status status="PASS" starttime="20220119 13:21:51.342" endtime="20220119 13:21:51.372"/>
+</kw>
+<status status="PASS" starttime="20220119 13:21:51.342" endtime="20220119 13:21:51.372"/>
+</kw>
+<status status="PASS" starttime="20220119 13:21:51.341" endtime="20220119 13:21:51.372"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:21:51.373" endtime="20220119 13:21:54.667"/>
+</kw>
+<status status="PASS" starttime="20220119 13:21:51.373" endtime="20220119 13:21:54.667"/>
+</kw>
+<status status="PASS" starttime="20220119 13:21:43.024" endtime="20220119 13:21:54.668"/>
+</test>
+<doc>Testing of the "Services" section</doc>
+<status status="PASS" starttime="20220119 13:21:42.778" endtime="20220119 13:21:54.670"/>
+</suite>
+<suite id="s1-s2" name="Front Office Contact" source="C:\Users\d.nedeljkov\Desktop\RF vezba\tests\Front_Office_Contact.robot">
+<test id="s1-s2-t1" name="Verify that the user can send a message after entering valid credentials in all fields">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:21:54.693" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:21:54.693" endtime="20220119 13:21:56.022"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:21:56.023" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:21:56.022" endtime="20220119 13:21:59.522"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:21:59.523" endtime="20220119 13:21:59.651"/>
+</kw>
+<status status="PASS" starttime="20220119 13:21:54.693" endtime="20220119 13:21:59.652"/>
 </kw>
 <kw name="Select the &quot;Contact&quot; Page" library="TopNav">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${TOP_NAV_CONTACT_LINK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220117 17:13:44.788" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[6]/a'.</msg>
-<status status="PASS" starttime="20220117 17:13:44.787" endtime="20220117 17:13:44.834"/>
+<msg timestamp="20220119 13:21:59.653" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[6]/a'.</msg>
+<status status="PASS" starttime="20220119 13:21:59.653" endtime="20220119 13:21:59.698"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220117 17:13:47.839" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220117 17:13:44.835" endtime="20220117 17:13:47.839"/>
+<msg timestamp="20220119 13:22:02.714" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:21:59.698" endtime="20220119 13:22:02.714"/>
 </kw>
-<status status="PASS" starttime="20220117 17:13:44.787" endtime="20220117 17:13:47.839"/>
+<status status="PASS" starttime="20220119 13:21:59.652" endtime="20220119 13:22:02.714"/>
 </kw>
 <kw name="Verify that a user can send a message" library="FrontOfficeApp">
 <kw name="A user can send a message" library="Contact">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${YOUR_NAME_CONTAINER}</arg>
-<arg>Moje ime</arg>
+<arg>Ime</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220117 17:13:47.841" level="INFO">Typing text 'Moje ime' into text field '//*[@id="name"]'.</msg>
-<status status="PASS" starttime="20220117 17:13:47.840" endtime="20220117 17:13:47.941"/>
+<msg timestamp="20220119 13:22:02.716" level="INFO">Typing text 'Ime' into text field '//*[@id="name"]'.</msg>
+<status status="PASS" starttime="20220119 13:22:02.715" endtime="20220119 13:22:02.805"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${YOUR_EMAIL_CONTAINER}</arg>
-<arg>email12312321321@gmail.com</arg>
+<arg>postisje123@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220117 17:13:47.942" level="INFO">Typing text 'email12312321321@gmail.com' into text field '//*[@id="email"]'.</msg>
-<status status="PASS" starttime="20220117 17:13:47.942" endtime="20220117 17:13:48.086"/>
+<msg timestamp="20220119 13:22:02.806" level="INFO">Typing text 'postisje123@gmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20220119 13:22:02.806" endtime="20220119 13:22:02.944"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${YOUR_PHONE_CONTAINER}</arg>
 <arg>0621232132832137213</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220117 17:13:48.087" level="INFO">Typing text '0621232132832137213' into text field '//*[@id="phone"]'.</msg>
-<status status="PASS" starttime="20220117 17:13:48.087" endtime="20220117 17:13:48.193"/>
+<msg timestamp="20220119 13:22:02.945" level="INFO">Typing text '0621232132832137213' into text field '//*[@id="phone"]'.</msg>
+<status status="PASS" starttime="20220119 13:22:02.944" endtime="20220119 13:22:03.056"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${YOUR_MESSAGE_CONTAINER}</arg>
 <arg>This is my message</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220117 17:13:48.194" level="INFO">Typing text 'This is my message' into text field '//*[@id="message"]'.</msg>
-<status status="PASS" starttime="20220117 17:13:48.193" endtime="20220117 17:13:48.301"/>
+<msg timestamp="20220119 13:22:03.057" level="INFO">Typing text 'This is my message' into text field '//*[@id="message"]'.</msg>
+<status status="PASS" starttime="20220119 13:22:03.057" endtime="20220119 13:22:03.159"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220117 17:13:51.313" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220117 17:13:48.301" endtime="20220117 17:13:51.313"/>
+<msg timestamp="20220119 13:22:06.176" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:03.159" endtime="20220119 13:22:06.176"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${SEND_MESSAGE_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220117 17:13:51.313" level="INFO">Clicking element '//*[@id="contactForm"]/div/div[4]/button'.</msg>
-<status status="PASS" starttime="20220117 17:13:51.313" endtime="20220117 17:13:51.357"/>
+<msg timestamp="20220119 13:22:06.177" level="INFO">Clicking element '//*[@id="contactForm"]/div/div[4]/button'.</msg>
+<status status="PASS" starttime="20220119 13:22:06.176" endtime="20220119 13:22:06.220"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220117 17:13:54.360" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220117 17:13:51.357" endtime="20220117 17:13:54.360"/>
+<msg timestamp="20220119 13:22:09.228" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:06.221" endtime="20220119 13:22:09.228"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${MESSAGE_SENT_SUCCESS_MESSAGE}</arg>
 <arg>Your message has been sent.</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20220117 17:13:54.360" level="INFO">Verifying element '//*[@id="success"]/div/strong' contains exact text 'Your message has been sent.'.</msg>
-<status status="PASS" starttime="20220117 17:13:54.360" endtime="20220117 17:13:54.381"/>
+<msg timestamp="20220119 13:22:09.229" level="INFO">Verifying element '//*[@id="success"]/div/strong' contains exact text 'Your message has been sent.'.</msg>
+<status status="PASS" starttime="20220119 13:22:09.228" endtime="20220119 13:22:09.248"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220117 17:13:59.395" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220117 17:13:54.381" endtime="20220117 17:13:59.395"/>
+<msg timestamp="20220119 13:22:11.264" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:09.248" endtime="20220119 13:22:11.264"/>
 </kw>
-<status status="PASS" starttime="20220117 17:13:47.840" endtime="20220117 17:13:59.395"/>
+<status status="PASS" starttime="20220119 13:22:02.715" endtime="20220119 13:22:11.264"/>
 </kw>
-<status status="PASS" starttime="20220117 17:13:47.840" endtime="20220117 17:13:59.395"/>
+<status status="PASS" starttime="20220119 13:22:02.715" endtime="20220119 13:22:11.264"/>
 </kw>
 <kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220117 17:13:59.396" endtime="20220117 17:14:01.692"/>
+<status status="PASS" starttime="20220119 13:22:11.266" endtime="20220119 13:22:13.528"/>
 </kw>
-<status status="PASS" starttime="20220117 17:13:59.396" endtime="20220117 17:14:01.692"/>
+<status status="PASS" starttime="20220119 13:22:11.265" endtime="20220119 13:22:13.528"/>
 </kw>
-<status status="PASS" starttime="20220117 17:13:39.796" endtime="20220117 17:14:01.693"/>
+<status status="PASS" starttime="20220119 13:21:54.692" endtime="20220119 13:22:13.529"/>
 </test>
 <doc>Testing of the "Services" section</doc>
-<status status="PASS" starttime="20220117 17:13:39.541" endtime="20220117 17:14:01.694"/>
+<status status="PASS" starttime="20220119 13:21:54.672" endtime="20220119 13:22:13.531"/>
+</suite>
+<suite id="s1-s3" name="Front Office Portfolio" source="C:\Users\d.nedeljkov\Desktop\RF vezba\tests\Front_Office_Portfolio.robot">
+<test id="s1-s3-t1" name="Portfolio section contains right section names">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:22:13.553" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:22:13.552" endtime="20220119 13:22:14.941"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:22:14.942" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:22:14.942" endtime="20220119 13:22:18.588"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:22:18.588" endtime="20220119 13:22:18.711"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:13.552" endtime="20220119 13:22:18.711"/>
+</kw>
+<kw name="Go to the &quot;Portfolio&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Portfolio&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_PORTFOLIO_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:22:18.713" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20220119 13:22:18.713" endtime="20220119 13:22:18.755"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:21.756" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:18.755" endtime="20220119 13:22:21.756"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:18.712" endtime="20220119 13:22:21.756"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:18.712" endtime="20220119 13:22:21.756"/>
+</kw>
+<kw name="Verify &quot;Portfolio&quot; sections names" library="FrontOfficeApp">
+<kw name="Portfolio section names are correct" library="Portfolio">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${PORTFOLIO_FIRST_SECTION_NAME}</arg>
+<arg>Round Icons</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:22:21.758" level="INFO">Verifying element '//*[@id="portfolio"]/div/div[2]/div[1]/div/h4' contains exact text 'Round Icons'.</msg>
+<status status="PASS" starttime="20220119 13:22:21.758" endtime="20220119 13:22:21.783"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${PORTFOLIO_SECOND_SECTION_NAME}</arg>
+<arg>Startup Framework</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:22:21.784" level="INFO">Verifying element '//*[@id="portfolio"]/div/div[2]/div[2]/div/h4' contains exact text 'Startup Framework'.</msg>
+<status status="PASS" starttime="20220119 13:22:21.783" endtime="20220119 13:22:21.805"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${PORTFOLIO_THIRD_SECTION_NAME}</arg>
+<arg>Treehouse</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:22:21.805" level="INFO">Verifying element '//*[@id="portfolio"]/div/div[2]/div[3]/div/h4' contains exact text 'Treehouse'.</msg>
+<status status="PASS" starttime="20220119 13:22:21.805" endtime="20220119 13:22:21.824"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${PORTFOLIO_FOURTH_SECTION_NAME}</arg>
+<arg>Golden</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:22:21.824" level="INFO">Verifying element '//*[@id="portfolio"]/div/div[2]/div[4]/div/h4' contains exact text 'Golden'.</msg>
+<status status="PASS" starttime="20220119 13:22:21.824" endtime="20220119 13:22:21.842"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${PORTFOLIO_FIFTH_SECTION_NAME}</arg>
+<arg>Escape</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:22:21.843" level="INFO">Verifying element '//*[@id="portfolio"]/div/div[2]/div[5]/div/h4' contains exact text 'Escape'.</msg>
+<status status="PASS" starttime="20220119 13:22:21.842" endtime="20220119 13:22:21.861"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${PORTFOLIO_SIXTH_SECTION_NAME}</arg>
+<arg>Dreams</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:22:21.862" level="INFO">Verifying element '//*[@id="portfolio"]/div/div[2]/div[6]/div/h4' contains exact text 'Dreams'.</msg>
+<status status="PASS" starttime="20220119 13:22:21.861" endtime="20220119 13:22:21.879"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:21.757" endtime="20220119 13:22:21.880"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:21.757" endtime="20220119 13:22:21.880"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:22:21.881" endtime="20220119 13:22:24.967"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:21.880" endtime="20220119 13:22:24.967"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:13.551" endtime="20220119 13:22:24.967"/>
+</test>
+<test id="s1-s3-t2" name="Portfolio section Mouse actions">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:22:24.971" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:22:24.970" endtime="20220119 13:22:26.329"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:22:26.330" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:22:26.329" endtime="20220119 13:22:30.014"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:22:30.014" endtime="20220119 13:22:30.134"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:24.969" endtime="20220119 13:22:30.134"/>
+</kw>
+<kw name="Go to the &quot;Portfolio&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Portfolio&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_PORTFOLIO_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:22:30.136" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20220119 13:22:30.136" endtime="20220119 13:22:30.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:33.198" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:30.184" endtime="20220119 13:22:33.198"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:30.135" endtime="20220119 13:22:33.198"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:30.135" endtime="20220119 13:22:33.198"/>
+</kw>
+<kw name="Verify Portfolio Mouse Actions" library="FrontOfficeApp">
+<kw name="Mouse actions are working" library="Portfolio">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${PORTFOLIO_FIRST_SECTION_AREA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220119 13:22:33.200" level="INFO">Simulating Mouse Over on element '//*[@id="portfolio"]/div/div[2]/div[1]'.</msg>
+<status status="PASS" starttime="20220119 13:22:33.200" endtime="20220119 13:22:33.485"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:35.500" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:33.485" endtime="20220119 13:22:35.500"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${PORTFOLIO_SECOND_SECTION_AREA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220119 13:22:35.500" level="INFO">Simulating Mouse Over on element '//*[@id="portfolio"]/div/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20220119 13:22:35.500" endtime="20220119 13:22:35.768"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:37.773" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:35.768" endtime="20220119 13:22:37.773"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${PORTFOLIO_THIRD_SECTION_AREA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220119 13:22:37.773" level="INFO">Simulating Mouse Over on element '//*[@id="portfolio"]/div/div[2]/div[3]'.</msg>
+<status status="PASS" starttime="20220119 13:22:37.773" endtime="20220119 13:22:38.056"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:40.069" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:38.056" endtime="20220119 13:22:40.069"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${PORTFOLIO_FOURTH_SECTION_AREA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220119 13:22:40.069" level="INFO">Simulating Mouse Over on element '//*[@id="portfolio"]/div/div[2]/div[4]'.</msg>
+<status status="PASS" starttime="20220119 13:22:40.069" endtime="20220119 13:22:40.348"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:42.360" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:40.348" endtime="20220119 13:22:42.360"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${PORTFOLIO_FIFTH_SECTION_AREA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220119 13:22:42.360" level="INFO">Simulating Mouse Over on element '//*[@id="portfolio"]/div/div[2]/div[5]'.</msg>
+<status status="PASS" starttime="20220119 13:22:42.360" endtime="20220119 13:22:42.641"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:44.645" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:42.641" endtime="20220119 13:22:44.645"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${PORTFOLIO_SIXTH_SECTION_AREA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220119 13:22:44.645" level="INFO">Simulating Mouse Over on element '//*[@id="portfolio"]/div/div[2]/div[6]'.</msg>
+<status status="PASS" starttime="20220119 13:22:44.645" endtime="20220119 13:22:44.925"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:46.933" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:44.925" endtime="20220119 13:22:46.933"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:33.199" endtime="20220119 13:22:46.933"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:33.199" endtime="20220119 13:22:46.933"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:22:46.935" endtime="20220119 13:22:49.181"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:46.934" endtime="20220119 13:22:49.181"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:24.969" endtime="20220119 13:22:49.182"/>
+</test>
+<test id="s1-s3-t3" name="Click on the first area in &quot;Portfolio&quot; section opens a modal">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:22:49.185" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:22:49.184" endtime="20220119 13:22:50.549"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:22:50.549" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:22:50.549" endtime="20220119 13:22:54.733"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:22:54.735" endtime="20220119 13:22:54.856"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:49.184" endtime="20220119 13:22:54.856"/>
+</kw>
+<kw name="Go to the &quot;Portfolio&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Portfolio&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_PORTFOLIO_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:22:54.858" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20220119 13:22:54.858" endtime="20220119 13:22:54.910"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:22:57.912" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:54.911" endtime="20220119 13:22:57.912"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:54.858" endtime="20220119 13:22:57.912"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:54.857" endtime="20220119 13:22:57.913"/>
+</kw>
+<kw name="Click on the first section" library="FrontOfficeApp">
+<kw name="Click on the first section opens a modal" library="Portfolio">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FIRST_SECTION_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:22:57.914" level="INFO">Clicking element '//*[@id="portfolio"]/div/div[2]/div[1]/a/div/div/i'.</msg>
+<status status="PASS" starttime="20220119 13:22:57.914" endtime="20220119 13:22:57.958"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${PORTFOLIO_FIRST_SECTION_AREA}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220119 13:22:57.960" level="INFO">Simulating Mouse Over on element '//*[@id="portfolio"]/div/div[2]/div[1]'.</msg>
+<status status="PASS" starttime="20220119 13:22:57.959" endtime="20220119 13:22:58.261"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:23:00.268" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:22:58.261" endtime="20220119 13:23:00.268"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${PROJECT_SECTION_ONE_MODAL_TEXT}</arg>
+<arg>amet consectetur</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220119 13:23:00.293" level="INFO">Element '//*[@id="portfolioModal1"]/div/div/div[2]/div/div/div/p[1]' contains text 'amet consectetur'.</msg>
+<status status="PASS" starttime="20220119 13:23:00.268" endtime="20220119 13:23:00.293"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:23:02.299" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:23:00.293" endtime="20220119 13:23:02.299"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLOSE_MODAL_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:23:02.299" level="INFO">Clicking element 'class=close-modal'.</msg>
+<status status="PASS" starttime="20220119 13:23:02.299" endtime="20220119 13:23:02.337"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:23:04.339" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:23:02.337" endtime="20220119 13:23:04.339"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:57.914" endtime="20220119 13:23:04.339"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:57.913" endtime="20220119 13:23:04.339"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:23:04.340" endtime="20220119 13:23:06.596"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:04.340" endtime="20220119 13:23:06.596"/>
+</kw>
+<status status="PASS" starttime="20220119 13:22:49.183" endtime="20220119 13:23:06.597"/>
+</test>
+<doc>Testing of the "Services" section</doc>
+<status status="PASS" starttime="20220119 13:22:13.533" endtime="20220119 13:23:06.599"/>
+</suite>
+<suite id="s1-s4" name="Front Office Services" source="C:\Users\d.nedeljkov\Desktop\RF vezba\tests\Front_Office_Services.robot">
+<test id="s1-s4-t1" name="&quot;E-Commerce&quot; section contains the right text">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:23:06.620" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:23:06.620" endtime="20220119 13:23:07.971"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:23:07.972" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:23:07.972" endtime="20220119 13:23:11.671"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:23:11.671" endtime="20220119 13:23:11.801"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:06.619" endtime="20220119 13:23:11.801"/>
+</kw>
+<kw name="Go to the &quot;Services&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Services&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_SERVICES_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:23:11.803" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20220119 13:23:11.802" endtime="20220119 13:23:11.856"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:23:14.873" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:23:11.857" endtime="20220119 13:23:14.873"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:11.802" endtime="20220119 13:23:14.873"/>
+</kw>
+<kw name="Verify Page Loaded" library="Services">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SERVICES_TITLE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:23:14.874" endtime="20220119 13:23:14.885"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:14.874" endtime="20220119 13:23:14.885"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:11.802" endtime="20220119 13:23:14.886"/>
+</kw>
+<kw name="Verify &quot;E-Commerce&quot; section text" library="FrontOfficeApp">
+<kw name="&quot;E.Commerce&quot; contains the right text" library="Services">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${E-COMMERCE_SECTION_TEXT}</arg>
+<arg>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:23:14.887" level="INFO">Verifying element '//*[@id="services"]/div/div[2]/div[1]/p' contains exact text 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'.</msg>
+<status status="PASS" starttime="20220119 13:23:14.887" endtime="20220119 13:23:14.913"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:14.887" endtime="20220119 13:23:14.913"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:14.886" endtime="20220119 13:23:14.914"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:23:16.924" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220119 13:23:14.914" endtime="20220119 13:23:16.924"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:23:16.925" endtime="20220119 13:23:19.175"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:16.925" endtime="20220119 13:23:19.175"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:06.618" endtime="20220119 13:23:19.176"/>
+</test>
+<doc>Testing of the "Services" section</doc>
+<status status="PASS" starttime="20220119 13:23:06.601" endtime="20220119 13:23:19.178"/>
+</suite>
+<suite id="s1-s5" name="Front Office Team" source="C:\Users\d.nedeljkov\Desktop\RF vezba\tests\Front_Office_Team.robot">
+<test id="s1-s5-t1" name="The bottom of the section contains the right text">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:23:19.199" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:23:19.198" endtime="20220119 13:23:20.597"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:23:20.597" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:23:20.597" endtime="20220119 13:23:24.520"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:23:24.520" endtime="20220119 13:23:24.652"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:19.198" endtime="20220119 13:23:24.653"/>
+</kw>
+<kw name="Go to the &quot;Team&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Team&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_TEAM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:23:24.654" level="INFO">Clicking element 'xpath=//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20220119 13:23:24.654" endtime="20220119 13:23:24.725"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:23:27.729" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:23:24.725" endtime="20220119 13:23:27.729"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:24.653" endtime="20220119 13:23:27.729"/>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:23:27.730" endtime="20220119 13:23:27.740"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:27.729" endtime="20220119 13:23:27.740"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:24.653" endtime="20220119 13:23:27.740"/>
+</kw>
+<kw name="Validate the &quot;Team&quot; page Bottom text" library="FrontOfficeApp">
+<kw name="Verify that Bottom Text is correct" library="Team">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${TEAM_BOTTOM_TEXT}</arg>
+<arg>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:23:27.742" level="INFO">Verifying element '//*[@id="team"]/div/div[3]/div/p' contains exact text 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.'.</msg>
+<status status="PASS" starttime="20220119 13:23:27.742" endtime="20220119 13:23:27.769"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:27.742" endtime="20220119 13:23:27.769"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:27.741" endtime="20220119 13:23:27.769"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:23:27.770" endtime="20220119 13:23:30.398"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:27.770" endtime="20220119 13:23:30.398"/>
+</kw>
+<doc>Bottom of the section text</doc>
+<tag>test1</tag>
+<status status="PASS" starttime="20220119 13:23:19.197" endtime="20220119 13:23:30.399"/>
+</test>
+<test id="s1-s5-t2" name="Should be able to access &quot;Team&quot; page">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:23:30.402" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:23:30.401" endtime="20220119 13:23:31.772"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:23:31.773" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:23:31.772" endtime="20220119 13:23:35.477"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:23:35.477" endtime="20220119 13:23:35.601"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:30.401" endtime="20220119 13:23:35.601"/>
+</kw>
+<kw name="Go to Landing page" library="FrontOfficeApp">
+<kw name="Navigate To" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:23:35.603" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:23:35.603" endtime="20220119 13:23:35.815"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:35.602" endtime="20220119 13:23:35.815"/>
+</kw>
+<kw name="Verify Page Loaded" library="Landing">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${LANDING_NAVIGATION_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:23:35.816" endtime="20220119 13:23:35.826"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:35.815" endtime="20220119 13:23:35.827"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:35.602" endtime="20220119 13:23:35.827"/>
+</kw>
+<kw name="Go to the &quot;Team&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Team&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_TEAM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:23:35.828" level="INFO">Clicking element 'xpath=//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20220119 13:23:35.828" endtime="20220119 13:23:35.870"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:23:38.880" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:23:35.870" endtime="20220119 13:23:38.880"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:35.828" endtime="20220119 13:23:38.880"/>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:23:38.881" endtime="20220119 13:23:38.891"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:38.880" endtime="20220119 13:23:38.891"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:35.827" endtime="20220119 13:23:38.892"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:23:38.893" endtime="20220119 13:23:42.301"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:38.892" endtime="20220119 13:23:42.301"/>
+</kw>
+<doc>This is test 1</doc>
+<tag>test2</tag>
+<status status="PASS" starttime="20220119 13:23:30.400" endtime="20220119 13:23:42.302"/>
+</test>
+<test id="s1-s5-t3" name="&quot;Team&quot; page should match requirements">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:23:42.305" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:23:42.305" endtime="20220119 13:23:43.714"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:23:43.715" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:23:43.714" endtime="20220119 13:23:47.552"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:23:47.552" endtime="20220119 13:23:47.683"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:42.304" endtime="20220119 13:23:47.683"/>
+</kw>
+<kw name="Go to Landing page" library="FrontOfficeApp">
+<kw name="Navigate To" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:23:47.685" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:23:47.685" endtime="20220119 13:23:47.890"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:47.684" endtime="20220119 13:23:47.890"/>
+</kw>
+<kw name="Verify Page Loaded" library="Landing">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${LANDING_NAVIGATION_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:23:47.891" endtime="20220119 13:23:47.901"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:47.890" endtime="20220119 13:23:47.901"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:47.684" endtime="20220119 13:23:47.901"/>
+</kw>
+<kw name="Go to the &quot;Team&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Team&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_TEAM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:23:47.904" level="INFO">Clicking element 'xpath=//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20220119 13:23:47.903" endtime="20220119 13:23:47.948"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:23:50.951" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:23:47.948" endtime="20220119 13:23:50.951"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:47.903" endtime="20220119 13:23:50.951"/>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:23:50.952" endtime="20220119 13:23:50.962"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:50.951" endtime="20220119 13:23:50.962"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:47.903" endtime="20220119 13:23:50.962"/>
+</kw>
+<kw name="Validate the &quot;Team&quot; page Title" library="FrontOfficeApp">
+<kw name="Verify Title is Correct" library="Team">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<arg>OUR AMAZING TEAM</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:23:50.964" level="INFO">Verifying element '//*[@id="team"]/div/div[1]/div/h2' contains exact text 'OUR AMAZING TEAM'.</msg>
+<status status="PASS" starttime="20220119 13:23:50.964" endtime="20220119 13:23:50.986"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:50.963" endtime="20220119 13:23:50.986"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:50.963" endtime="20220119 13:23:50.986"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:23:50.987" endtime="20220119 13:23:54.360"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:50.987" endtime="20220119 13:23:54.360"/>
+</kw>
+<doc>This is test 2</doc>
+<tag>test3</tag>
+<status status="PASS" starttime="20220119 13:23:42.303" endtime="20220119 13:23:54.361"/>
+</test>
+<test id="s1-s5-t4" name="Verify that &quot;Bryan Lamb&quot; job is CTO">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:23:54.365" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:23:54.364" endtime="20220119 13:23:55.730"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:23:55.731" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:23:55.731" endtime="20220119 13:23:59.429"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:23:59.430" endtime="20220119 13:23:59.548"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:54.363" endtime="20220119 13:23:59.548"/>
+</kw>
+<kw name="Go to the &quot;Team&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Team&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_TEAM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:23:59.550" level="INFO">Clicking element 'xpath=//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20220119 13:23:59.549" endtime="20220119 13:23:59.597"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:24:02.607" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:23:59.597" endtime="20220119 13:24:02.607"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:59.549" endtime="20220119 13:24:02.607"/>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:24:02.608" endtime="20220119 13:24:02.618"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:02.607" endtime="20220119 13:24:02.618"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:59.549" endtime="20220119 13:24:02.618"/>
+</kw>
+<kw name="Validate Bryan Lamb's job title" library="FrontOfficeApp">
+<kw name="Bryan Lamb's job title is correct" library="Team">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${BRYAN_JOB_TITLE}</arg>
+<arg>CTO</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:24:02.620" level="INFO">Verifying element '//*[@id="team"]/div/div[2]/div[1]/div/p' contains exact text 'CTO'.</msg>
+<status status="PASS" starttime="20220119 13:24:02.620" endtime="20220119 13:24:02.646"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:02.619" endtime="20220119 13:24:02.647"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:02.619" endtime="20220119 13:24:02.647"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:24:02.648" endtime="20220119 13:24:05.640"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:02.647" endtime="20220119 13:24:05.640"/>
+</kw>
+<status status="PASS" starttime="20220119 13:23:54.362" endtime="20220119 13:24:05.641"/>
+</test>
+<test id="s1-s5-t5" name="Verify that &quot;Larry Parker&quot; job is Lead Marketer">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:24:05.644" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:24:05.643" endtime="20220119 13:24:06.978"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:24:06.978" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:24:06.978" endtime="20220119 13:24:10.966"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:24:10.966" endtime="20220119 13:24:11.093"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:05.643" endtime="20220119 13:24:11.093"/>
+</kw>
+<kw name="Go to the &quot;Team&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Team&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_TEAM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:24:11.094" level="INFO">Clicking element 'xpath=//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20220119 13:24:11.094" endtime="20220119 13:24:11.142"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:24:14.145" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:24:11.142" endtime="20220119 13:24:14.145"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:11.094" endtime="20220119 13:24:14.145"/>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:24:14.146" endtime="20220119 13:24:14.156"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:14.145" endtime="20220119 13:24:14.156"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:11.093" endtime="20220119 13:24:14.156"/>
+</kw>
+<kw name="Validate Larry Parker's job title" library="FrontOfficeApp">
+<kw name="Larry Parker's job title is correct" library="Team">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LARRY_JOB_TITLE}</arg>
+<arg>Lead Marketer</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:24:14.158" level="INFO">Verifying element '//*[@id="team"]/div/div[2]/div[2]/div/p' contains exact text 'Lead Marketer'.</msg>
+<status status="PASS" starttime="20220119 13:24:14.157" endtime="20220119 13:24:14.182"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:14.157" endtime="20220119 13:24:14.182"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:14.157" endtime="20220119 13:24:14.183"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:24:14.184" endtime="20220119 13:24:17.107"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:14.183" endtime="20220119 13:24:17.107"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:05.642" endtime="20220119 13:24:17.107"/>
+</test>
+<test id="s1-s5-t6" name="Verify that &quot;Diana Pertersen&quot; job is Lead Developer">
+<kw name="Begin Web Test" library="CommonWebApp" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220119 13:24:17.110" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220119 13:24:17.110" endtime="20220119 13:24:18.483"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220119 13:24:18.484" level="INFO">Opening url 'https://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" starttime="20220119 13:24:18.483" endtime="20220119 13:24:22.370"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220119 13:24:22.370" endtime="20220119 13:24:22.501"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:17.109" endtime="20220119 13:24:22.502"/>
+</kw>
+<kw name="Go to the &quot;Team&quot; page" library="FrontOfficeApp">
+<kw name="Select the &quot;Team&quot; page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_TEAM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220119 13:24:22.503" level="INFO">Clicking element 'xpath=//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20220119 13:24:22.503" endtime="20220119 13:24:22.552"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220119 13:24:25.564" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220119 13:24:22.552" endtime="20220119 13:24:25.564"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:22.503" endtime="20220119 13:24:25.564"/>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220119 13:24:25.565" endtime="20220119 13:24:25.575"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:25.564" endtime="20220119 13:24:25.575"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:22.502" endtime="20220119 13:24:25.575"/>
+</kw>
+<kw name="Validate Diana Pertersen's job title" library="FrontOfficeApp">
+<kw name="Diana Pertersen job title is correct" library="Team">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${DIANA_JOB_TITLE}</arg>
+<arg>Lead Developer</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220119 13:24:25.577" level="INFO">Verifying element '//*[@id="team"]/div/div[2]/div[3]/div/p' contains exact text 'Lead Developer'.</msg>
+<status status="PASS" starttime="20220119 13:24:25.576" endtime="20220119 13:24:25.604"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:25.576" endtime="20220119 13:24:25.604"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:25.576" endtime="20220119 13:24:25.604"/>
+</kw>
+<kw name="End Web Test" library="CommonWebApp" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220119 13:24:25.605" endtime="20220119 13:24:28.776"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:25.605" endtime="20220119 13:24:28.776"/>
+</kw>
+<status status="PASS" starttime="20220119 13:24:17.109" endtime="20220119 13:24:28.776"/>
+</test>
+<doc>Testing of the "Team" section</doc>
+<status status="PASS" starttime="20220119 13:23:19.180" endtime="20220119 13:24:28.778"/>
+</suite>
+<status status="PASS" starttime="20220119 13:21:42.752" endtime="20220119 13:24:28.781"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">test1</stat>
+<stat pass="1" fail="0" skip="0">test2</stat>
+<stat pass="1" fail="0" skip="0">test3</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="front office Contact">front office Contact</stat>
+<stat pass="12" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Front Office About">Tests.Front Office About</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Front Office Contact">Tests.Front Office Contact</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s3" name="Front Office Portfolio">Tests.Front Office Portfolio</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="Front Office Services">Tests.Front Office Services</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s5" name="Front Office Team">Tests.Front Office Team</stat>
 </suite>
 </statistics>
 <errors>
