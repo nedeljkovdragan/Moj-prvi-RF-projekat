@@ -53,3 +53,5 @@ Go to the "Contact" page
     TopNav.Select the "Contact" Page
 Verify that a user can send a message
     Contact.A user can send a message
+Verify that error messages appear under each field
+    Contact.Error messages do appear
