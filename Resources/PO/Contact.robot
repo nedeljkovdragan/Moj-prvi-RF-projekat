@@ -21,7 +21,6 @@ A user can send a message
     ${number} =  Generate Random String  7  [NUMBERS]
     ${message} =  Generate Random String  347  [UPPER] [LOWER] [UPPER] [LOWER]
     Input Text  ${YOUR_NAME_CONTAINER}  Some name
-    #Remove String  ${YOUR_NAME_CONTAINER} ovo ne radi pos'o brisanja stringa :D
     Input Text  ${YOUR_EMAIL_CONTAINER}  ${password}@gmail.com
     Input Text  ${YOUR_PHONE_CONTAINER}  076${number}
     Input Text  ${YOUR_MESSAGE_CONTAINER}  This is my message "${message}"
